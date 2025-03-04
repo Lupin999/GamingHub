@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="video-background">
+    <video autoplay muted loop id="bgVideo">
+      <source src="videos/gaming_background.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+  <header>
+    <h1>Welcome to the Gaming Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#login-signup">Login/Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="best-selling-games">
+      <h2>Best Selling Games</h2>
+      <div class="game-container">
+        <img src="images/need_for_speed.jpg" alt="Need for Speed">
+        <div class="overlay">Need for Speed - $59.99</div>
+      </div>
+      <div class="game-container">
+        <img src="images/god_of_war.jpg" alt="God of War">
+        <div class="overlay">God of War - $49.99</div>
+      </div>
+      <div class="game-container">
+        <img src="images/spiderman.jpg" alt="Spiderman 4">
+        <div class="overlay">Spiderman 4 - $39.99</div>
+      </div>
+      <!-- Add more games as needed -->
+    </section>
+    <section id="login-signup">
+      <div class="tab-container">
+        <div class="tabs">
+          <button class="tab-button" onclick="openTab(event, 'login')">Login</button>
+          <button class="tab-button" onclick="openTab(event, 'signup')">Sign Up</button>
+        </div>
+        <div id="login" class="tab-content">
+          <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+        <div id="signup" class="tab-content">
+          <div class="signup-container">
+            <h1>Sign Up</h1>
+            <form id="signupForm">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <label for="payment">Payment Method:</label>
+              <select id="payment" name="payment" required>
+                <option value="mpesa">Mpesa</option>
+                <option value="paypal">PayPal</option>
+              </select>
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="profile">
+      <div class="profile-container">
+        <h1>Profile</h1>
+        <img src="images/profile_placeholder.png" alt="Profile Photo" id="profilePhoto">
+        <p id="profileUsername"></p>
+        <p id="profileEmail"></p>
+        <button id="logoutButton">Logout</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Gaming Hub. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
